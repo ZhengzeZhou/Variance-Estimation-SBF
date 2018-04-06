@@ -1,2 +1,2 @@
 # Variance-Estimation-SBF
-Variance Estimation Methods for Subsampled Random Forest
+R implementation of variance estimation methods for Subsampled Random Forest
