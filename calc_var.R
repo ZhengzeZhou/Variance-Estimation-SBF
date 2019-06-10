@@ -21,7 +21,7 @@ calc_var <- function(X, model, correction = FALSE) {
   ntree <- model$ntree
   sampsize <- sum(model$inbag[, 1])
   
-  testall <- predict(model, X, predict.all  = TRUE)
+  testall <- predict(model, X, predict.all = TRUE)
   y_pred <- testall$aggregate
   
   if (model$type == "regression") {
@@ -48,6 +48,7 @@ calc_var <- function(X, model, correction = FALSE) {
   }
   
   if (model$type == "classification") {
+    
     individual <- apply(testall$individual, 2, as.numeric)
     y_prob <- apply(individual, 1, mean)
     
